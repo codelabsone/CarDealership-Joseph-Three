@@ -1,14 +1,15 @@
 class Vehicle
 
-  def initialize(brand,model,year,price=0)
+  def initialize(brand,model,year,price=0,vin)
     @brand = brand.capitalize
     @model = model.capitalize
     @year = year
     @price = price
+    @vin = vin
   end
 
   def to_s
-    "#{@brand} #{@model} made in #{@year} that costs $#{@price}."
+    "#{@brand} #{@model} made in #{@year} that costs $#{@price} with a vin of #{@vin}."
   end
 
   def dent
@@ -21,18 +22,5 @@ class Vehicle
 
 end
 
-vehicle1 = Vehicle.new("chevrolet","corvette",2019,125000)
+vehicle1 = Vehicle.new("chevrolet","corvette",2019,125000,12345678901234567)
 puts vehicle1
-
-class CarInInventory
-def initialize(vin, price)
-  @vin = vin
-  @price = price
-  end
-
-  def to_s
-    "vin: #{@vin} price: #{@price}"
-  end
-end
-  car  = CarInInventory.new(12000, 10000)
-puts car
