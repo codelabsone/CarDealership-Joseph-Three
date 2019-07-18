@@ -1,6 +1,6 @@
 class Vehicle
 
-  def initialize(brand,model,year,price=0,vin)
+  def initialize(brand,model,year,price=0,vin=00000000000000000)
     @brand = brand.capitalize
     @model = model.capitalize
     @year = year
