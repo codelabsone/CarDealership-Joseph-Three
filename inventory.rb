@@ -1,15 +1,16 @@
 class Vehicle
 
-  def initialize(brand,model,year,price=0,vin=00000000000000000)
+  def initialize(brand,model,color,year,price=0,vin=00000000000000000)
     @brand = brand.capitalize
     @model = model.capitalize
+    @color = color
     @year = year
     @price = price
     @vin = vin
   end
 
   def to_s
-    "#{@brand} #{@model} made in #{@year} that costs $#{@price} with a vin of #{@vin}."
+    "A #{@color} #{@brand} #{@model} made in #{@year} that costs $#{@price} with a vin of #{@vin}."
   end
 
   def dent
@@ -22,5 +23,9 @@ class Vehicle
 
 end
 
-vehicle1 = Vehicle.new("chevrolet","corvette",2019,125000,12345678901234567)
+vehicle1 = Vehicle.new("chevrolet","corvette","red",2019,125000,12345678901234567)
+vehicle2 = Vehicle.new("chevrolet","corvette","red",2019,125000,12345678901234567)
+vehicle2.scratch
+
 puts vehicle1
+puts vehicle2
