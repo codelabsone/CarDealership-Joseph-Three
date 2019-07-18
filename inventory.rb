@@ -24,7 +24,6 @@ end
 vehicle1 = Vehicle.new("chevrolet","corvette",2019,125000)
 puts vehicle1
 
-
 class CarInInventory
 def initialize(vin, price)
   @vin = vin
