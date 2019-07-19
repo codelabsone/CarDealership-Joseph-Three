@@ -20,5 +20,5 @@ attr_writer :brand,:model,:color,:year,:mileage,:condition
 
 end
 
-car1 = Appraisal.new("chevrolet","corvette","red","2019","50000","very good")
+car1 = Appraisal.new("chevrolet","corvette","red","2019","50,000","very good")
 puts car1
