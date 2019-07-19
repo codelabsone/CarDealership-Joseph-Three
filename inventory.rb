@@ -11,7 +11,7 @@ attr_reader :vin
   end
 
   def to_s
-    "A #{@color} #{@brand} #{@model} made in #{@year} that costs $#{@price} with a vin of #{@vin}. The vin number is #{@vin.length} characters long."
+    "A #{@color} #{@brand} #{@model} made in #{@year} that costs $#{@price} with a vin of #{@vin}. \nThe vin number is #{@vin.length} characters long."
   end
 
   def dent
