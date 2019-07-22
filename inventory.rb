@@ -31,7 +31,7 @@ vehicle3 = Vehicle.new("ford","F-150","blue",2013,"34,000","321598764TU785RC6","
 vehicle4 = Vehicle.new("dodge","stratus","red",2006,900,"4NHTU892449856145","38,756")
 vehicle5 = Vehicle.new("dodge","charger","silver",2016,"13,000","3JW85DH84FBY8732F","692,684")
 
-vehicle = [vehicle1,vehicle2,vehicle3,vehicle4,vehicle5]
-puts vehicle
+vehicles = [vehicle1,vehicle2,vehicle3,vehicle4,vehicle5]
+puts vehicles
 
 puts vehicle5.vin.length == 17
