@@ -28,8 +28,26 @@ attr_writer :brand,:model,:color,:year,:mileage,:condition
     end
   end
 
+  def mileage
+    if @mileage >= 0 and @mileage <= 24999
+      0.90
+
+    elsif @mileage >= 25000 and @mileage <= 49999
+      0.70
+
+    elsif @mileage >= 50000 and @mileage <= 74999
+      0.60
+
+    elsif @mileage >= 75000 and @mileage <= 99999
+      0.40
+
+    else @mileage >= 100000
+      0.20
+    end
+  end
+
   def est_value
-    (@year.to_i + @mileage.to_i) * condition
+    @year.to_i * mileage * condition
   end
 
   def to_s
