@@ -47,7 +47,7 @@ attr_writer :brand,:model,:color,:year,:mileage,:condition
   end
 
   def est_value
-    @year.to_i * mileage * condition
+    sprintf("%0.02f", @year.to_i * mileage * condition)
   end
 
   def to_s
@@ -62,8 +62,6 @@ car2 = Appraisal.new("chevrolet","corvette","red",2019,125000,"good")
 car3 = Appraisal.new("ford","F-150","blue",2013,34000,"ok")
 car4 = Appraisal.new("dodge","stratus","red",2006,900,"bad")
 car5 = Appraisal.new("dodge","charger","silver",2016,13000,"very bad")
-puts car1
-puts car2
-puts car3
-puts car4
-puts car5
+
+cars = [car1, car2, car3, car4, car5]
+puts cars
