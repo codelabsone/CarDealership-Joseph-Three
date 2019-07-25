@@ -57,11 +57,11 @@ attr_writer :brand,:model,:color,:year,:mileage,:condition
 end
 
 
-car1 = Appraisal.new("chevrolet","corvette","red",2019,50000,"very good")
-car2 = Appraisal.new("chevrolet","corvette","red",2019,125000,"good")
-car3 = Appraisal.new("ford","F-150","blue",2013,34000,"ok")
-car4 = Appraisal.new("dodge","stratus","red",2006,900,"bad")
-car5 = Appraisal.new("dodge","charger","silver",2016,13000,"very bad")
+appraisal1 = Appraisal.new("chevrolet","corvette","red",2019,50000,"very good")
+appraisal2 = Appraisal.new("chevrolet","corvette","red",2019,125000,"good")
+appraisal3 = Appraisal.new("ford","F-150","blue",2013,34000,"ok")
+appraisal4 = Appraisal.new("dodge","stratus","red",2006,900,"bad")
+appraisal5 = Appraisal.new("dodge","charger","silver",2016,13000,"very bad")
 
 cars = [car1, car2, car3, car4, car5]
 puts cars
