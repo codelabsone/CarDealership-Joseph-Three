@@ -24,5 +24,5 @@ car3 = Car.new("321598764TU785RC6",23552,46574,"34,000")
 car4 = Car.new("4NHTU892449856145",2352,46753,900)
 car5 = Car.new("3JW85DH84FBY8732F",123534,12454,"13,000")
 
-profit = [vehicle1,vehicle2,vehicle3,vehicle4,vehicle5]
+profit = [car1,car2,car3,car4,car5]
 puts profit
