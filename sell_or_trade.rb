@@ -63,5 +63,5 @@ appraisal3 = Appraisal.new("ford","F-150","blue",2013,34000,"ok")
 appraisal4 = Appraisal.new("dodge","stratus","red",2006,900,"bad")
 appraisal5 = Appraisal.new("dodge","charger","silver",2016,13000,"very bad")
 
-cars = [car1,car2,car3,car4,car5]
+cars = [appraisal1,appraisal2,appraisal3,appraisal4,appraisal5]
 puts cars
