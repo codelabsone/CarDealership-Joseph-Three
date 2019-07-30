@@ -1,17 +1,20 @@
 #Profit per sale
-require_relative "inventory"
+require_relative "Randomizer"
+
+class Financials
+
+  def initialize
+    Randomizer.random_car
+  end
 
   def net_profit
-    @sell_price - @buy_price
+    @net_profit = @sell_price - @buy_price
   end
 
   def to_s
     "#{@vin} was listed at $#{@list_price}.  #{@vin} was bought for $#{@buy_price} and sold for $#{@sell_price}.  The net profit for #{@vin} was $#{net_profit}."
   end
+end
 
-
-
-
-
-@profit = net_profit
-puts profit
+finance = Financials.new
+puts finance
