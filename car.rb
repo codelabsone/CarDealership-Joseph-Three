@@ -8,6 +8,6 @@ class Car
   end
 
   def to_s
-    "VIN:#{@vin}, BUY PRICE: $#{@buy_price}, SELL PRICE: $#{@sell_price}, LIST PRICE: $#{@list_price}, MAKE:#{@make}, MODEL:#{@model}, YEAR:#{@year}, COLOR:#{@color}, MILEAGE:#{@mileage}."
+    "VIN:#{@vin}, #{@year} #{@make} #{@model}, COLOR:#{@color}, MILEAGE:#{@mileage}, \nBUY PRICE: $#{@buy_price}, SELL PRICE: $#{@sell_price}, LIST PRICE: $#{@list_price}."
   end
 end
