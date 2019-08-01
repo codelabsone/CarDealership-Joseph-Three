@@ -12,7 +12,7 @@ class Financials
   end
 
   def to_s
-    "#{Randomizer.random_vin} was listed at $#{Randomizer.random_list_price}.  #{Randomizer.random_vin} was bought for $#{Randomizer.random_buy_price} and sold for $#{Randomizer.random_sell_price}.  The net profit for #{Randomizer.random_vin} was $#{net_profit}."
+    "\n#{Randomizer.random_vin} was listed at $#{Randomizer.random_list_price}.  \n#{Randomizer.random_vin} was bought for $#{Randomizer.random_buy_price} and sold for $#{Randomizer.random_sell_price}.  \nThe net profit for #{Randomizer.random_vin} was $#{net_profit}."
   end
 end
 
