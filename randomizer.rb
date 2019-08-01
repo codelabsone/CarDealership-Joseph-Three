@@ -14,7 +14,7 @@ attr_reader :vin, :buy_price, :sell_price, :list_price, :make, :model, :year, :c
     car.year = self.random_year
     car.color = self.random_color
     car.mileage = self.random_mileage
-  
+
   end
 
   def self.random_vin
