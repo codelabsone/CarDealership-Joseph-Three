@@ -8,11 +8,11 @@ class Financials
   end
 
   def net_profit
-    @net_profit = @sell_price - @buy_price
+    @net_profit = Randomizer.random_sell_price - Randomizer.random_buy_price
   end
 
   def to_s
-    "#{@vin} was listed at $#{@list_price}.  #{@vin} was bought for $#{@buy_price} and sold for $#{@sell_price}.  The net profit for #{@vin} was $#{net_profit}."
+    "#{Randomizer.random_vin} was listed at $#{Randomizer.random_list_price}.  #{Randomizer.random_vin} was bought for $#{Randomizer.random_buy_price} and sold for $#{Randomizer.random_sell_price}.  The net profit for #{Randomizer.random_vin} was $#{@net_profit}."
   end
 end
 
