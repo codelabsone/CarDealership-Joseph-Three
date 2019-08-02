@@ -1,30 +1,20 @@
-require_relative "Randomizer"
-require_relative "car"
 
-class Inventory_database
-attr_reader :vin
 
-attr_accessor :cars
 
-def initialize
-  @cars = Array.new
-end
 
-def add_car(car)
-  puts car
-  @cars.push(car)
-end
 
-def seed
-  10.times do
-    @cars.push(Randomizer.random_car)
-  end
-end
-end
 
-10.times do
-  puts Randomizer.random_car
-end
+
+
+
+
+
+
+
+
+
+
+
 #   def initialize(make,model,color,year,price=0,vin=00000000000000000,mileage)
 #     @make = make.capitalize
 #     @model = model.capitalize

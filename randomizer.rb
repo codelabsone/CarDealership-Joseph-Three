@@ -1,20 +1,18 @@
 require_relative 'car'
 
 module Randomizer
-attr_reader :vin, :buy_price, :sell_price, :list_price, :make, :model, :year, :color, :mileage
 
   def self.random_car
-    car = Car.new
-    car.vin = self.random_vin
-    car.buy_price = self.random_buy_price
-    car.sell_price = self.random_sell_price
-    car.list_price = self.random_list_price
-    car.make = self.random_make
-    car.model = self.random_model
-    car.year = self.random_year
-    car.color = self.random_color
-    car.mileage = self.random_mileage
-
+    @vin = self.random_vin
+    @buy_price = self.random_buy_price
+    @sell_price = self.random_sell_price
+    @list_price = self.random_list_price
+    @make = self.random_make
+    @model = self.random_model
+    @year = self.random_year
+    @color = self.random_color
+    @mileage = self.random_mileage
+    car = Car.new(@vin,@buy_price,@sell_price,@list_price,@make,@model,@year,@color,@mileage)
   end
 
   def self.random_vin
@@ -52,4 +50,17 @@ attr_reader :vin, :buy_price, :sell_price, :list_price, :make, :model, :year, :c
   def self.random_mileage
     rand(000000..999999)
   end
+end
+
+if __FILE__ == $0
+puts Randomizer.random_car
+puts Randomizer.random_vin
+puts Randomizer.random_buy_price
+puts Randomizer.random_sell_price
+puts Randomizer.random_list_price
+puts Randomizer.random_make
+puts Randomizer.random_model
+puts Randomizer.random_year
+puts Randomizer.random_color
+puts Randomizer.random_mileage
 end
