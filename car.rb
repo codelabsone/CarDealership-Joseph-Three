@@ -1,5 +1,3 @@
-require_relative 'randomizer'
-
 class Car
   attr_accessor :vin, :buy_price, :sell_price, :list_price, :make, :model, :year, :color, :mileage
 
