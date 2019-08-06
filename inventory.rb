@@ -10,11 +10,13 @@ class CarDatabase
   end
 
   def to_s
+    puts "*******************************"
     puts "These cars are in the database:"
 
     @database.each do |car|
       puts "#{car.color}"
     end
+    "*********************************"
   end
 
   def add_car     #unfinished method
