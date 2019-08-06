@@ -1,4 +1,29 @@
 require_relative 'car'
+require_relative 'randomizer'
 
-inventory = Struct.new(:vin,:buy_price,:sell_price,:list_price,:make,:model,:year,:color,:mileage)
-cube = Car.new(55705640583637794,78938,17731,20063,"Chevrolet","Odyssey",1993,"Black",817094)
+class CarDatabase
+
+  attr_accessor :database
+
+  def initialize
+    @database = []
+  end
+
+  def to_s
+    puts @database
+
+  def add_car     #unfinished method
+  @database.push
+  end
+
+  def create_cars
+    20.times do
+      @database.push(Randomizer.random_car)
+    end
+  end
+
+end
+
+database = CarDatabase.new
+database.create_cars
+puts database
