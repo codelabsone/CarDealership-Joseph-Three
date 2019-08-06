@@ -11,7 +11,8 @@ class CarDatabase
 
   def to_s
     puts @database
-
+  end
+  
   def add_car     #unfinished method
   @database.push
   end
