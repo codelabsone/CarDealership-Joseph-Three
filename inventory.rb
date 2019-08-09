@@ -4,7 +4,7 @@ require_relative 'randomizer'
 class CarDatabase
 
   attr_accessor :database
-  #attr_accessor :vin, :buy_price, :sell_price, :list_price, :make, :model, :year, :color, :mileage
+  
   def initialize
     @database = []
   end
