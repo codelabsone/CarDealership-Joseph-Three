@@ -65,7 +65,7 @@ class CarDatabase
 
 end
 
-if __FILE__ = $0
+if __FILE__ == $0
 database = CarDatabase.new
 database.create_cars
 puts database
