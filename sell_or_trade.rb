@@ -56,7 +56,7 @@ attr_writer :brand,:model,:color,:year,:mileage,:condition
 
 end
 
-
+if __FILE__ = $0
 appraisal1 = Appraisal.new("chevrolet","corvette","red",2019,50000,"very good")
 appraisal2 = Appraisal.new("chevrolet","corvette","red",2019,125000,"good")
 appraisal3 = Appraisal.new("ford","F-150","blue",2013,34000,"ok")
@@ -65,3 +65,4 @@ appraisal5 = Appraisal.new("dodge","charger","silver",2016,13000,"very bad")
 
 appraisals = [appraisal1,appraisal2,appraisal3,appraisal4,appraisal5]
 puts appraisals
+end

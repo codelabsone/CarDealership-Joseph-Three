@@ -20,7 +20,9 @@ attr_accessor :price,:down_payment,:apr,:term
 
 end
 
+if __FILE__ = $0
 payment1 = Monthly_Payment.new(75010,10,0.04,120)
 puts payment1
 payment1.price = 50000
 puts payment1
+end

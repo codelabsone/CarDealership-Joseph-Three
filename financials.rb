@@ -16,5 +16,7 @@ class Financials
   end
 end
 
+if __FILE__ = $0
 finance = Financials.new
 puts finance
+end

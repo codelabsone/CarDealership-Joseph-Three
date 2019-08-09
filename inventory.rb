@@ -65,6 +65,7 @@ class CarDatabase
 
 end
 
+if __FILE__ = $0
 database = CarDatabase.new
 database.create_cars
 puts database
@@ -72,3 +73,4 @@ database.add_random_car
 puts database
 database.add_specific_car
 puts database
+end
