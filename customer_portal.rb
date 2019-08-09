@@ -1,3 +1,7 @@
+require_relative 'inventory'
+
+
+
 module Customer_Portal
 
   def self.welcome
@@ -25,8 +29,11 @@ module Customer_Portal
 
     if input == "1"
 
+      database = CarDatabase.new
+      database.create_cars(45)
+
       puts "****************************************"
-      puts "hi"
+      puts "#{database}"
       puts "****************************************"
 
     elsif input == "2"
