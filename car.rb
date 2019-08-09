@@ -1,7 +1,7 @@
 class Car
   attr_accessor :vin, :buy_price, :sell_price, :list_price, :make, :model, :year, :color, :mileage
 
-  def initialize(vin,buy_price,sell_price,list_price,make,model,year,color,mileage)
+  def initialize(vin=0,buy_price=0,sell_price=0,list_price=0,make="",model="",year="",color="",mileage="")
     @vin = vin
     @buy_price = buy_price
     @sell_price = sell_price
