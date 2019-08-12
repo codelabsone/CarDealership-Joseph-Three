@@ -11,7 +11,8 @@
 require 'rubygems'
 require 'highline/import'
 require_relative 'inventory'
-
+#you must install ruby gem 'highline'
+#command prompt -> gem install highline
 class Employee_Portal
 
   def initialize ()
