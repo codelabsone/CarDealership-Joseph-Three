@@ -13,17 +13,21 @@
 #   goto customer portal
 
 
-require_relative 'employee_portal'
-require_relative 'customer_portal'
+# require_relative 'employee_portal'
+# require_relative 'customer_portal'
 
-module Main_Menu
+class Main_Menu
+  def initialize
+
+  end
+
 
   def self.landing_menu
     puts "Main menu".center(80, '*')
     puts "Please select an option by pressing the corresponding number, then 'enter':"
     puts "1) I am an employee"
     puts "2) I am a customer"
-    puts "3) I want to exit"
+    puts "0) I want to exit"
   end
 
   def self.input
@@ -35,7 +39,7 @@ module Main_Menu
           #customer_portal.rb
         elsif input == '0'
           puts "Thanks for visiting us today!"
-          { exit } #exit command
+          #exit command
         else
           unknown_command
           self.input
@@ -49,9 +53,13 @@ module Main_Menu
     end
 
     def self.reset_input
-      menu
+      Main_Menu.landing_menu
 
-      input(menu)
+      input(database)
     end
 
+end
+
+if __FILE__ == $0
+puts Main_Menu.landing_menu
 end

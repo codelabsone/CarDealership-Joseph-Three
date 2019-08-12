@@ -4,7 +4,7 @@ require_relative 'randomizer'
 class CarDatabase
 
   attr_accessor :database
-  
+
   def initialize
     @database = []
   end
@@ -56,8 +56,8 @@ class CarDatabase
 
   end
 
-  def create_cars(times)
-    1.upto(times) do
+  def create_cars#(times)
+    10.times do
       @database.push(Randomizer.random_car)
     end
   end
