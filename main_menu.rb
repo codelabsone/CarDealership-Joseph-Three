@@ -44,7 +44,7 @@ module Main_Menu
           #exit command
         else
           unknown_command
-          self.input
+          self.landing_menu
       end
     end
 
