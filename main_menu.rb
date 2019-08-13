@@ -18,8 +18,6 @@ require_relative 'customer_portal'
 
 module Main_Menu
 
-
-
   def self.landing_menu
     puts "Main menu".center(80, '*')
     puts "Please select an option by pressing the corresponding number, then 'enter':"
