@@ -17,7 +17,7 @@ module Customer_Portal
     puts "1) view inventory"
     puts "2) sell or trade your vehicle"
     puts "3) payment calculator"
-    puts "4) exit"
+    puts "0) exit"
     puts "****************************************"
   end
 
@@ -48,7 +48,7 @@ module Customer_Portal
       puts "hola"
       puts "****************************************"
 
-    elsif input == "4"
+    elsif input == "0"
 
       puts "****************************************"
       puts "nice"
