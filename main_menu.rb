@@ -55,7 +55,7 @@ module Main_Menu
     end
 
     def self.reset_input
-      Main_Menu.landing_menu
+      landing_menu
 
       input(database)
     end
