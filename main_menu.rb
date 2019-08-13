@@ -13,8 +13,8 @@
 #   goto customer portal
 
 
-# require_relative 'employee_portal'
-# require_relative 'customer_portal'
+require_relative 'employee_portal'
+require_relative 'customer_portal'
 
 class Main_Menu
   def initialize
@@ -28,9 +28,7 @@ class Main_Menu
     puts "1) I am an employee"
     puts "2) I am a customer"
     puts "0) I want to exit"
-  end
 
-  def self.input
     input = gets.chomp
     text = "PROCESSING".center(80, '-')
       if input == '1'
@@ -61,5 +59,5 @@ class Main_Menu
 end
 
 if __FILE__ == $0
-puts Main_Menu.landing_menu
+Main_Menu.landing_menu
 end

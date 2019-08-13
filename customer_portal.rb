@@ -64,7 +64,7 @@ module Customer_Portal
       puts "2) sell or trade your vehicle"
       puts "3) payment calculator"
       puts "4) exit"
-      puts "**************************************************"
+      puts "****************************************"
 
     end
   end
