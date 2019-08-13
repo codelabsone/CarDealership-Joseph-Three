@@ -23,9 +23,9 @@ class Employee_Portal
 
     input = gets.chomp.downcase
       if input == "0"
-        #goto Main_Menu
+        Main_Menu.landing_menu
       else
-        puts "Please enter your password:"
+        puts "Welcome, #{input.capitalize}, please enter your password:"
       end
     end
 end
