@@ -56,8 +56,8 @@ class CarDatabase
 
   end
 
-  def create_cars(times)
-    1.upto(times) do
+  def create_cars
+    10.times do
       @database.push(Randomizer.random_car)
     end
   end
