@@ -10,13 +10,13 @@ class CarDatabase
   end
 
   def to_s
-    puts "****************************************"
+    puts "********************************************************************************"
     puts "These cars are in the database:"
 
     @database.each do |car|
       puts "#{car.color} #{car.make} #{car.model}"
     end
-    "****************************************"
+    "********************************************************************************"
   end
 
   def add_random_car     #adds a random car to the @database array

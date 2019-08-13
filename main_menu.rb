@@ -49,9 +49,10 @@ module Main_Menu
     end
 
     def self.unknown_command
-      puts '************************************'
-      puts "I'm sorry, I don't know that command, type 9 for help"
-      puts '************************************'
+      puts "********************************************************************************"
+      puts "I'm sorry, I don't know that command."
+      puts "********************************************************************************"
+      landing_menu
     end
 
     def self.reset_input
