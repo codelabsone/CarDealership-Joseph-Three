@@ -33,7 +33,7 @@ class Main_Menu
     text = "PROCESSING".center(80, '-')
       if input == '1'
           employee_portal = Employee_Portal.new #employee_portal.rb
-          puts "#{employee_portal.welcome}"
+          employee_portal.welcome
         elsif input == '2'
           #customer_portal.rb
         elsif input == '0'
