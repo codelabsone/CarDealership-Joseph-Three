@@ -15,7 +15,7 @@ attr_accessor :price,:down_payment,:apr,:term
   end
 
   def to_s
-    "Youre monthly payments would be $#{your_payment}."
+    "Your monthly payments would be $#{your_payment}."
   end
 
 end
