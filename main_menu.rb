@@ -16,10 +16,8 @@
 require_relative 'employee_portal'
 require_relative 'customer_portal'
 
-class Main_Menu
-  def initialize
+module Main_Menu
 
-  end
 
 
   def self.landing_menu
