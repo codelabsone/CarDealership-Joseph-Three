@@ -18,13 +18,14 @@ class Employee_Portal
   def initialize ()
 
   end
+  def welcome
+    puts "Welcome, MCCM employee. Please enter your name, or press 0 for the main menu"
 
-  puts "Welcome, MCCM employee. Please enter your name, or press 0 for the main menu"
-
-  gets.chomp.downcase
-    if input == "0"
-      #goto Main_Menu
-    else
-      puts "Please enter your password:"
+    gets.chomp.downcase
+      if input == "0"
+        #goto Main_Menu
+      else
+        puts "Please enter your password:"
+      end
     end
 end
