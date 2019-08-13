@@ -70,5 +70,8 @@ module Customer_Portal
   end
 end
 
+
+if __FILE__ == $0
 Customer_Portal.welcome
 Customer_Portal.input
+end
