@@ -71,9 +71,7 @@ module Customer_Portal
 
     elsif input == "0"
 
-      puts ast
       puts Main_Menu.landing_menu
-
 
     else
 
