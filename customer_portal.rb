@@ -56,6 +56,7 @@ module Customer_Portal
       appraisal.condition = gets.chomp
       puts appraisal
       puts "********************************************************************************"
+      Customer_Portal.input
 
     elsif input == "3"
 
