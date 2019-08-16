@@ -1,7 +1,7 @@
 class Appraisal
-attr_writer :brand,:model,:color,:year,:mileage,:condition
+attr_accessor :brand,:model,:color,:year,:mileage,:condition
 
-  def initialize(brand,model,color,year,mileage,condition)
+  def initialize(brand="",model="",color="",year="",mileage="",condition="")
     @brand = brand.capitalize
     @model = model.capitalize
     @color = color
@@ -57,7 +57,7 @@ attr_writer :brand,:model,:color,:year,:mileage,:condition
 end
 
 if __FILE__ == $0
-appraisal1 = Appraisal.new("chevrolet","corvette","red",2019,50000,"very good")
+appraisal1 = Appraisal.new("chevrolet","corvette","red",2019,25050,"very good")
 appraisal2 = Appraisal.new("chevrolet","corvette","red",2019,125000,"good")
 appraisal3 = Appraisal.new("ford","F-150","blue",2013,34000,"ok")
 appraisal4 = Appraisal.new("dodge","stratus","red",2006,900,"bad")

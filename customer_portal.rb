@@ -1,5 +1,5 @@
 require_relative 'inventory'
-
+require_relative 'sell_or_trade'
 
 
 module Customer_Portal
@@ -14,10 +14,10 @@ module Customer_Portal
 
   def self.help
     puts "Please select an option:"
-    puts "1) view inventory"
-    puts "2) sell or trade your vehicle"
-    puts "3) payment calculator"
-    puts "0) exit"
+    puts "1) View inventory"
+    puts "2) Sell or trade your vehicle"
+    puts "3) Payment calculator"
+    puts "0) Exit"
     puts "********************************************************************************"
   end
 
@@ -39,7 +39,22 @@ module Customer_Portal
     elsif input == "2"
 
       puts "********************************************************************************"
-      puts "hello"
+      puts "Please answer the following questions about your vehicle."
+      puts "********************************************************************************"
+      appraisal = Appraisal.new
+      puts "What is your vehicle's brand?"
+      appraisal.brand = gets.chomp
+      puts "What is your vehicles's model?"
+      appraisal.model = gets.chomp
+      puts "What is your vehicles's color?"
+      appraisal.color = gets.chomp
+      puts "What is your vehicles's year?"
+      appraisal.year = gets.chomp
+      puts "What is your vehicles's mileage?"
+      appraisal.mileage = gets.chomp.to_i
+      puts "What is your vehicles's condition?"
+      appraisal.condition = gets.chomp
+      puts appraisal
       puts "********************************************************************************"
 
     elsif input == "3"
