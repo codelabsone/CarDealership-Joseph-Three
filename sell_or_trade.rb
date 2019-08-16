@@ -47,7 +47,7 @@ attr_accessor :brand,:model,:color,:year,:mileage,:condition
   end
 
   def est_value
-    sprintf("%0.02f", @year.to_i * mileage * condition) #sprintf rounds of floating decimal to two points
+    sprintf("%0.02f", @year.to_i * mileage * condition) #sprintf rounds off floating decimal to two points
   end
 
   def to_s
