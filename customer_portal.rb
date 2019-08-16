@@ -4,11 +4,15 @@ require_relative 'main_menu'
 
 module Customer_Portal
 
+  def self.ast
+    ast = "*".center(80, "*")
+  end
+
   def self.welcome
 
-    puts "********************************************************************************"
+    puts ast
     puts "Welcome to MCCM Cars!"
-    puts "********************************************************************************"
+    puts ast
 
   end
 
@@ -17,8 +21,8 @@ module Customer_Portal
     puts "1) View inventory"
     puts "2) Sell or trade your vehicle"
     puts "3) Payment calculator"
-    puts "0) Exit"
-    puts "********************************************************************************"
+    puts "0) Back to main menu"
+    puts ast
   end
 
   def self.input
@@ -32,15 +36,15 @@ module Customer_Portal
       database = CarDatabase.new
       database.create_cars(45)
 
-      puts "********************************************************************************"
+      puts ast
       puts "#{database}"
-      puts "********************************************************************************"
+      puts ast
 
     elsif input == "2"
 
-      puts "********************************************************************************"
+      puts ast
       puts "Please answer the following questions about your vehicle."
-      puts "********************************************************************************"
+      puts ast
       appraisal = Appraisal.new
       puts "What is your vehicle's brand?"
       appraisal.brand = gets.chomp
@@ -55,32 +59,26 @@ module Customer_Portal
       puts "What is your vehicles's condition?"
       appraisal.condition = gets.chomp
       puts appraisal
-      puts "********************************************************************************"
+      puts ast
       Customer_Portal.input
 
     elsif input == "3"
 
-      puts "********************************************************************************"
-      puts "hola"
-      puts "********************************************************************************"
+      puts ast
+      puts ast
 
     elsif input == "0"
 
-      puts "********************************************************************************"
+      puts ast
       puts Main_Menu.landing_menu
-      puts "********************************************************************************"
+
 
     else
 
-      puts "********************************************************************************"
+      puts ast
       puts "Error, please enter a valid option."
-      puts "********************************************************************************"
-      puts "Please select an option:"
-      puts "1) view inventory"
-      puts "2) sell or trade your vehicle"
-      puts "3) payment calculator"
-      puts "0) exit"
-      puts "********************************************************************************"
+      puts ast
+      Customer_Portal.input
 
     end
   end
