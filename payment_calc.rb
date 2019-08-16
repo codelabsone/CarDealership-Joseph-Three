@@ -17,9 +17,10 @@ attr_accessor :price,:down_payment,:apr,:term,:mpr,:x
   end
 
   def to_s
-    "Your monthly payments would be $#{your_payment}."
+    "Your monthly payments would be $#{your_payment.round(2)}."
   end
 
+  
 end
 
 if __FILE__ == $0
