@@ -1,17 +1,19 @@
 class Monthly_Payment
-attr_accessor :price,:down_payment,:apr,:term
+attr_accessor :price,:down_payment,:apr,:term,:mpr,:x
 
-  def initialize(price,down_payment,apr,term)
+  def initialize(price=0,down_payment=0,apr=0,term=0,mpr=0,x=0)
     @price = price
     @down_payment = down_payment
     @apr = apr
     @term = term
+    @mpr = mpr
+    @x = x
   end
 
   def your_payment
-    mpr = @apr / 12
-    x = (1 + mpr)**@term
-    (@price - @down_payment) * (mpr * x) / (x - 1)
+    @mpr = @apr / 12
+    @x = (1 + @mpr)**@term
+    (@price - @down_payment) * (@mpr * @x) / (@x - 1)
   end
 
   def to_s

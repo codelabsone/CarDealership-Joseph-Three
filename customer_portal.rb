@@ -1,6 +1,7 @@
 require_relative 'inventory'
 require_relative 'sell_or_trade'
 require_relative 'main_menu'
+require_relative 'payment_calc'
 
 module Customer_Portal
 
@@ -64,8 +65,10 @@ module Customer_Portal
 
     elsif input == "3"
 
-      puts ast
-      puts ast
+
+
+      pay_calc
+
 
     elsif input == "0"
 
@@ -82,6 +85,24 @@ module Customer_Portal
 
     end
   end
+
+  def self.pay_calc
+    monthlypayment = Monthly_Payment.new
+
+    puts "Payment Calculator"
+    puts "Please enter the price of the vehicle."
+    monthlypayment.price = gets.chomp.to_f
+    puts "Please enter your down payment."
+    monthlypayment.down_payment = gets.chomp.to_f
+    puts "How many months will your loan last?"
+    monthlypayment.term = gets.chomp.to_f
+    puts "What is the annual percent rate?"
+    monthlypayment.apr = gets.chomp.to_f
+
+    monthlypayment.your_payment
+    puts monthlypayment
+  end
+
 end
 
 
