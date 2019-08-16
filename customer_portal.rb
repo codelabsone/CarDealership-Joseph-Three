@@ -1,6 +1,6 @@
 require_relative 'inventory'
 require_relative 'sell_or_trade'
-
+require_relative 'main_menu'
 
 module Customer_Portal
 
@@ -66,7 +66,7 @@ module Customer_Portal
     elsif input == "0"
 
       puts "********************************************************************************"
-      puts "nice"
+      puts Main_Menu.landing_menu
       puts "********************************************************************************"
 
     else
