@@ -68,7 +68,8 @@ module Customer_Portal
       puts ast
       pay_calc
       puts ast
-
+      Customer_Portal.input
+      
     elsif input == "0"
 
       puts ast
