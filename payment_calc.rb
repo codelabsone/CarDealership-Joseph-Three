@@ -11,16 +11,18 @@ attr_accessor :price,:down_payment,:apr,:term,:mpr,:x
   end
 
   def your_payment
+
     @mpr = @apr / 12
     @x = (1 + @mpr)**@term
-    (@price - @down_payment) * (@mpr * @x) / (@x - 1)
+    sprintf("%0.02f", (@price - @down_payment) * (@mpr * @x) / (@x - 1))
+    #using sprintf instead of round(x) will return a 2-digit float if the last digit is 0
   end
 
   def to_s
-    "Your monthly payments would be $#{your_payment.round(2)}."
+    "Your monthly payments would be $#{your_payment}."
   end
 
-  
+
 end
 
 if __FILE__ == $0
