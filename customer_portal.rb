@@ -2,18 +2,17 @@ require_relative 'inventory'
 require_relative 'sell_or_trade'
 require_relative 'main_menu'
 require_relative 'payment_calc'
+require_relative 'asterisks'
 
 module Customer_Portal
 
-  def self.ast
-    ast = "*".center(80, "*")
-  end
+
 
   def self.welcome
 
-    puts ast
+    puts Aster.long
     puts "Welcome to MCCM Cars!"
-    puts ast
+    puts Aster.long
 
   end
 
@@ -23,7 +22,7 @@ module Customer_Portal
     puts "2) Sell or trade your vehicle"
     puts "3) Payment calculator"
     puts "0) Back to main menu"
-    puts ast
+    puts Aster.short
   end
 
   def self.input
@@ -37,15 +36,16 @@ module Customer_Portal
       database = CarDatabase.new
       database.create_cars(45)
 
-      puts ast
+      puts Aster.short
       puts "#{database}"
-      puts ast
+      puts Aster.short
+      Customer_Portal.input
 
     elsif input == "2"
 
-      puts ast
+      puts Aster.long
       puts "Please answer the following questions about your vehicle."
-      puts ast
+      puts Aster.long
       appraisal = Appraisal.new
       puts "What is your vehicle's brand?"
       appraisal.brand = gets.chomp
@@ -60,25 +60,25 @@ module Customer_Portal
       puts "What is your vehicles's condition?"
       appraisal.condition = gets.chomp
       puts appraisal
-      puts ast
+      puts Aster.long
       Customer_Portal.input
 
     elsif input == "3"
 
-      puts ast
+      puts Aster.short
       pay_calc
-      puts ast
+      puts Aster.long
       Customer_Portal.input
-      
+
     elsif input == "0"
 
       puts Main_Menu.landing_menu
 
     else
 
-      puts ast
+      puts Aster.short
       puts "Error, please enter a valid option."
-      puts ast
+      puts Aster.short
       Customer_Portal.input
 
     end

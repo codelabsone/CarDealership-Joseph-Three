@@ -15,15 +15,20 @@
 
 require_relative 'employee_portal'
 require_relative 'customer_portal'
+require_relative 'asterisks'
 
 module Main_Menu
 
+
   def self.landing_menu
+    puts Aster.long
     puts "Main menu".center(80, '*')
+    puts Aster.long
     puts "Please select an option by pressing the corresponding number, then 'enter':"
     puts "1) I am an employee"
     puts "2) I am a customer"
     puts "0) I want to exit"
+    puts Aster.long
 
     input = gets.chomp
     text = "PROCESSING".center(80, '-')
@@ -38,8 +43,10 @@ module Main_Menu
 
           #customer_portal.rb
         elsif input == '0'
-          puts "Thanks for visiting us today!"
-          #exit command
+          puts Aster.long
+          puts "Thanks for visiting us today!".center(80, " ")
+          puts Aster.long
+
         else
           unknown_command
           landing_menu
@@ -47,9 +54,9 @@ module Main_Menu
     end
 
     def self.unknown_command
-      puts "********************************************************************************"
+      puts Aster.short
       puts "I'm sorry, I don't know that command."
-      puts "********************************************************************************"
+      puts Aster.short
       landing_menu
     end
 
